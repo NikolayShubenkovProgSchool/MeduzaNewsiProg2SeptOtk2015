@@ -30,13 +30,20 @@
                 @"locale" : @"ru"
                 }
       success:^(AFHTTPRequestOperation * _Nonnull operation, id  _Nonnull responseObject) {
-          NSLog(@"%@",responseObject);
           success(responseObject);
       }
       failure:^(AFHTTPRequestOperation * _Nonnull operation, NSError * _Nonnull error) {
-          NSLog(@"%@",error);
           failure(error);
       }];
+}
+
+- (void)getNewsDetailesByPath:(NSString *)path withSuccess:(void (^)(id))success failure:(void (^)(NSError *))failure {
+    [self GET:path
+   parameters:nil success:^(AFHTTPRequestOperation * _Nonnull operation, id  _Nonnull responseObject) {
+        success(responseObject);
+   } failure:^(AFHTTPRequestOperation * _Nonnull operation, NSError * _Nonnull error) {
+       failure(error);
+   }];
 }
 
 @end

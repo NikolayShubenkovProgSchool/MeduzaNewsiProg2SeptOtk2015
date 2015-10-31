@@ -12,4 +12,6 @@
 
 - (void)saveNewsArticlesFromJSON:(id)json;
 
+- (void)updateNewsArticleDetailesFromJSON:(NSDictionary *)json;
+
 @end

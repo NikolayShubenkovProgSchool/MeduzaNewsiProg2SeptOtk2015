@@ -24,6 +24,7 @@
 		4F82B5AC1BE4AE680096B7C0 /* NewsListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F82B5AB1BE4AE680096B7C0 /* NewsListViewController.m */; };
 		4F82B5AF1BE4AF8A0096B7C0 /* NewsAPIManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F82B5AE1BE4AF8A0096B7C0 /* NewsAPIManager.m */; };
 		4F82B5E01BE4BE2D0096B7C0 /* StoreManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F82B5DF1BE4BE2D0096B7C0 /* StoreManager.m */; };
+		4F8BA53D1BE4F8E600077285 /* NewsDetailedViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F8BA53C1BE4F8E600077285 /* NewsDetailedViewController.m */; };
 		BC48AAB6E6CE48C7F7A87A00 /* libPods-MeduzaNewsiProg2SeptOtk2015.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D3AAAB9B6CBA2DFB0AEFAAAA /* libPods-MeduzaNewsiProg2SeptOtk2015.a */; };
 /* End PBXBuildFile section */
 
@@ -60,6 +61,8 @@
 		4F82B5AE1BE4AF8A0096B7C0 /* NewsAPIManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NewsAPIManager.m; sourceTree = "<group>"; };
 		4F82B5DE1BE4BE2D0096B7C0 /* StoreManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StoreManager.h; sourceTree = "<group>"; };
 		4F82B5DF1BE4BE2D0096B7C0 /* StoreManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StoreManager.m; sourceTree = "<group>"; };
+		4F8BA53B1BE4F8E600077285 /* NewsDetailedViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NewsDetailedViewController.h; sourceTree = "<group>"; };
+		4F8BA53C1BE4F8E600077285 /* NewsDetailedViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NewsDetailedViewController.m; sourceTree = "<group>"; };
 		B4CE4C4E4130FAA5AFD441ED /* Pods-MeduzaNewsiProg2SeptOtk2015.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MeduzaNewsiProg2SeptOtk2015.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MeduzaNewsiProg2SeptOtk2015/Pods-MeduzaNewsiProg2SeptOtk2015.debug.xcconfig"; sourceTree = "<group>"; };
 		D3AAAB9B6CBA2DFB0AEFAAAA /* libPods-MeduzaNewsiProg2SeptOtk2015.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-MeduzaNewsiProg2SeptOtk2015.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -103,6 +106,8 @@
 				4F82B5AA1BE4AE680096B7C0 /* NewsListViewController.h */,
 				4F82B5AB1BE4AE680096B7C0 /* NewsListViewController.m */,
 				4F82B5DE1BE4BE2D0096B7C0 /* StoreManager.h */,
+				4F8BA53B1BE4F8E600077285 /* NewsDetailedViewController.h */,
+				4F8BA53C1BE4F8E600077285 /* NewsDetailedViewController.m */,
 				4F82B5DF1BE4BE2D0096B7C0 /* StoreManager.m */,
 				4F82B5AD1BE4AF8A0096B7C0 /* NewsAPIManager.h */,
 				4F82B5AE1BE4AF8A0096B7C0 /* NewsAPIManager.m */,
@@ -294,6 +299,7 @@
 				4F82B5AF1BE4AF8A0096B7C0 /* NewsAPIManager.m in Sources */,
 				4F188F271BE4C4840093DEB9 /* NewsArticle+CoreDataProperties.m in Sources */,
 				4F188F261BE4C4840093DEB9 /* NewsImage.m in Sources */,
+				4F8BA53D1BE4F8E600077285 /* NewsDetailedViewController.m in Sources */,
 				4F188F281BE4C4840093DEB9 /* NewsArticle.m in Sources */,
 				4F188F251BE4C4840093DEB9 /* NewsImage+CoreDataProperties.m in Sources */,
 				4F82B5A61BE4A2BA0096B7C0 /* Model.xcdatamodeld in Sources */,

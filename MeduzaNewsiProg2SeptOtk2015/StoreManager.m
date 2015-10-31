@@ -10,8 +10,40 @@
 
 #import <MagicalRecord/MagicalRecord.h>
 #import "NewsArticle+CoreDataProperties.h"
+#import "NewsImage+CoreDataProperties.h"
 
 @implementation StoreManager
+
+- (void)updateNewsArticleDetailesFromJSON:(NSDictionary *)json {
+    
+    [MagicalRecord saveWithBlock:^(NSManagedObjectContext *localContext) {
+        
+        NSDictionary *root = json[@"root"];
+        NSArray *gallery = root[@"gallery"];
+        
+        NSString *newsURL = root[@"url"];
+        NewsArticle *article = [NewsArticle MR_findFirstByAttribute:@"idValue"
+                                                          withValue:newsURL
+                                                          inContext:localContext];
+        article.content = root[@"content"][@"body"];
+        
+        for (NSDictionary *imageInfo in gallery){
+            NSString *url = imageInfo[@"original_url"];
+            url = [@"https://meduza.io" stringByAppendingString:url];
+            
+            NewsImage *image = [NewsImage MR_findFirstByAttribute:@"url"
+                                                        withValue:url
+                                //-----------------!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!---------
+                                                        inContext:localContext];
+            
+            if (image == nil){
+                image = [NewsImage MR_createEntityInContext:localContext];
+                image.url = url;
+            }
+            [article addNewRelationshipObject:image];
+        }
+    }];
+}
 
 - (void)saveNewsArticlesFromJSON:(NSDictionary *)json {
    [MagicalRecord saveWithBlock:^(NSManagedObjectContext *localContext) {

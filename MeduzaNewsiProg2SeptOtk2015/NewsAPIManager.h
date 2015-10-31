@@ -12,5 +12,6 @@
 
 + (instancetype)manager;
 - (void)getNewsOfType:(NSString *)type page:(NSInteger)page withSuccess:(void (^)(id responseObject))success  failure:(void (^)(NSError *error))failure;
+- (void)getNewsDetailesByPath:(NSString *)path withSuccess:(void (^)(id responseObject))success  failure:(void (^)(NSError *error))failure;
 
 @end

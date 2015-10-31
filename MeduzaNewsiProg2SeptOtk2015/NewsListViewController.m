@@ -14,6 +14,8 @@
 #import "NewsTableViewCell.h"
 #import "NewsArticle+CoreDataProperties.h"
 
+#import "NewsDetailedViewController.h"
+
 #import "NewsAPIManager.h"
 #import "StoreManager.h"
 
@@ -80,6 +82,38 @@
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
     return UITableViewAutomaticDimension;
+}
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    NewsArticle *article = (NewsArticle *)[self itemAtIndexPath:indexPath];
+    //Если конента нет, то скачаем его
+    if (article.content == nil){
+        [[NewsAPIManager manager]getNewsDetailesByPath:article.idValue
+                                           withSuccess:^(id responseObject) {
+                                               StoreManager *manager = [StoreManager new];
+                                               [manager updateNewsArticleDetailesFromJSON:responseObject];
+                                               [self presentNewsArticle:article];
+                                           }
+                                               failure:nil];
+        return;
+    }
+    [self presentNewsArticle:article];
+}
+
+- (void)presentNewsArticle:(NewsArticle *)article {
+//    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(0.5 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+//        [article.managedObjectContext refreshAllObjects];
+        [self performSegueWithIdentifier:@"Show Article"
+                                  sender:article];
+//    });
+
+}
+
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+    if ([segue.destinationViewController isKindOfClass:[NewsDetailedViewController class]]){
+        NewsDetailedViewController *vc = segue.destinationViewController;
+        vc.article = sender;
+    }
 }
 
 @end
