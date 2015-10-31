@@ -19,6 +19,8 @@
 
 @interface NewsListViewController ()
 
+@property (nonatomic) NSInteger nextPageToLoad;
+
 @end
 
 @implementation NewsListViewController
@@ -38,7 +40,11 @@
     NewsArticle *article        = (NewsArticle *) item;
     
     newsCell.articleLabel.text = article.title;
-    newsCell.dateLabel.text    = article.date.description;
+    
+    NSDateFormatter *formatter = [NSDateFormatter new];
+    formatter.dateFormat = @"dd, MMMM";
+    
+    newsCell.dateLabel.text    = [formatter stringFromDate:article.date];
 }
 
 - (void)viewDidLoad {
@@ -46,18 +52,34 @@
     self.cellReuseIdentifier = @"NewsID";
     
     [super viewDidLoad];
-    [self updateDataForPage:0];
+    self.tableView.rowHeight = UITableViewAutomaticDimension;
+    self.tableView.estimatedRowHeight = 100;
+    
+    [self updateDataForPage:self.nextPageToLoad];
     // Do any additional setup after loading the view.
 }
 
 - (void)updateDataForPage:(NSInteger)page {
-    [[NewsAPIManager manager] getNewsOfType:@"shapito" page:0 withSuccess:^(id responseObject) {
+    [[NewsAPIManager manager] getNewsOfType:@"shapito" page:page withSuccess:^(id responseObject) {
         StoreManager *manager = [StoreManager new];
         [manager saveNewsArticlesFromJSON:responseObject];
-        
+        self.nextPageToLoad = self.nextPageToLoad + 1;
     } failure:^(NSError *error) {
         
     }];
+}
+
+- (void)tableView:(UITableView *)tableView willDisplayCell:(UITableViewCell *)cell forRowAtIndexPath:(NSIndexPath *)indexPath {
+    NSInteger currentElementsCount = [tableView numberOfRowsInSection:0];
+    NSInteger currentObjectIndex = indexPath.row;
+    
+    if (currentElementsCount - currentObjectIndex == 5){
+        [self updateDataForPage:self.nextPageToLoad];
+    }
+}
+
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
+    return UITableViewAutomaticDimension;
 }
 
 @end
