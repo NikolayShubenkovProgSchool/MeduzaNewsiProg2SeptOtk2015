@@ -34,8 +34,8 @@
 }
 
 - (void)configureCell:(UITableViewCell *)aCell withItem:(NSManagedObject *)item {
-    NewsTableViewCell *newsCell = aCell;
-    NewsArticle *article = item;
+    NewsTableViewCell *newsCell = (NewsTableViewCell *) aCell;
+    NewsArticle *article        = (NewsArticle *) item;
     
     newsCell.articleLabel.text = article.title;
     newsCell.dateLabel.text    = article.date.description;
