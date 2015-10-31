@@ -7,6 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4F188F231BE4C4840093DEB9 /* NewsCategory+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F188F181BE4C4840093DEB9 /* NewsCategory+CoreDataProperties.m */; };
+		4F188F241BE4C4840093DEB9 /* NewsCategory.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F188F1A1BE4C4840093DEB9 /* NewsCategory.m */; };
+		4F188F251BE4C4840093DEB9 /* NewsImage+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F188F1C1BE4C4840093DEB9 /* NewsImage+CoreDataProperties.m */; };
+		4F188F261BE4C4840093DEB9 /* NewsImage.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F188F1E1BE4C4840093DEB9 /* NewsImage.m */; };
+		4F188F271BE4C4840093DEB9 /* NewsArticle+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F188F201BE4C4840093DEB9 /* NewsArticle+CoreDataProperties.m */; };
+		4F188F281BE4C4840093DEB9 /* NewsArticle.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F188F221BE4C4840093DEB9 /* NewsArticle.m */; };
+		4F188F2B1BE4CA290093DEB9 /* PSRCoreDataTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F188F2A1BE4CA290093DEB9 /* PSRCoreDataTableViewController.m */; };
 		4F82B58F1BE4A2740096B7C0 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F82B58E1BE4A2740096B7C0 /* main.m */; };
 		4F82B5921BE4A2740096B7C0 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F82B5911BE4A2740096B7C0 /* AppDelegate.m */; };
 		4F82B5981BE4A2740096B7C0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4F82B5961BE4A2740096B7C0 /* Main.storyboard */; };
@@ -16,11 +23,26 @@
 		4F82B5A91BE4A8860096B7C0 /* NewsTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F82B5A81BE4A8860096B7C0 /* NewsTableViewCell.m */; };
 		4F82B5AC1BE4AE680096B7C0 /* NewsListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F82B5AB1BE4AE680096B7C0 /* NewsListViewController.m */; };
 		4F82B5AF1BE4AF8A0096B7C0 /* NewsAPIManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F82B5AE1BE4AF8A0096B7C0 /* NewsAPIManager.m */; };
+		4F82B5E01BE4BE2D0096B7C0 /* StoreManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F82B5DF1BE4BE2D0096B7C0 /* StoreManager.m */; };
 		BC48AAB6E6CE48C7F7A87A00 /* libPods-MeduzaNewsiProg2SeptOtk2015.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D3AAAB9B6CBA2DFB0AEFAAAA /* libPods-MeduzaNewsiProg2SeptOtk2015.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		2F7B94DCF056B8F6D851BDE9 /* Pods-MeduzaNewsiProg2SeptOtk2015.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MeduzaNewsiProg2SeptOtk2015.release.xcconfig"; path = "Pods/Target Support Files/Pods-MeduzaNewsiProg2SeptOtk2015/Pods-MeduzaNewsiProg2SeptOtk2015.release.xcconfig"; sourceTree = "<group>"; };
+		4F188F171BE4C4840093DEB9 /* NewsCategory+CoreDataProperties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NewsCategory+CoreDataProperties.h"; path = "../NewsCategory+CoreDataProperties.h"; sourceTree = "<group>"; };
+		4F188F181BE4C4840093DEB9 /* NewsCategory+CoreDataProperties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NewsCategory+CoreDataProperties.m"; path = "../NewsCategory+CoreDataProperties.m"; sourceTree = "<group>"; };
+		4F188F191BE4C4840093DEB9 /* NewsCategory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = NewsCategory.h; path = ../NewsCategory.h; sourceTree = "<group>"; };
+		4F188F1A1BE4C4840093DEB9 /* NewsCategory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = NewsCategory.m; path = ../NewsCategory.m; sourceTree = "<group>"; };
+		4F188F1B1BE4C4840093DEB9 /* NewsImage+CoreDataProperties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NewsImage+CoreDataProperties.h"; path = "../NewsImage+CoreDataProperties.h"; sourceTree = "<group>"; };
+		4F188F1C1BE4C4840093DEB9 /* NewsImage+CoreDataProperties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NewsImage+CoreDataProperties.m"; path = "../NewsImage+CoreDataProperties.m"; sourceTree = "<group>"; };
+		4F188F1D1BE4C4840093DEB9 /* NewsImage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = NewsImage.h; path = ../NewsImage.h; sourceTree = "<group>"; };
+		4F188F1E1BE4C4840093DEB9 /* NewsImage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = NewsImage.m; path = ../NewsImage.m; sourceTree = "<group>"; };
+		4F188F1F1BE4C4840093DEB9 /* NewsArticle+CoreDataProperties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NewsArticle+CoreDataProperties.h"; path = "../NewsArticle+CoreDataProperties.h"; sourceTree = "<group>"; };
+		4F188F201BE4C4840093DEB9 /* NewsArticle+CoreDataProperties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NewsArticle+CoreDataProperties.m"; path = "../NewsArticle+CoreDataProperties.m"; sourceTree = "<group>"; };
+		4F188F211BE4C4840093DEB9 /* NewsArticle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = NewsArticle.h; path = ../NewsArticle.h; sourceTree = "<group>"; };
+		4F188F221BE4C4840093DEB9 /* NewsArticle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = NewsArticle.m; path = ../NewsArticle.m; sourceTree = "<group>"; };
+		4F188F291BE4CA290093DEB9 /* PSRCoreDataTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PSRCoreDataTableViewController.h; path = ../PSRCoreDataTableViewController.h; sourceTree = "<group>"; };
+		4F188F2A1BE4CA290093DEB9 /* PSRCoreDataTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PSRCoreDataTableViewController.m; path = ../PSRCoreDataTableViewController.m; sourceTree = "<group>"; };
 		4F82B58A1BE4A2740096B7C0 /* MeduzaNewsiProg2SeptOtk2015.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MeduzaNewsiProg2SeptOtk2015.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4F82B58E1BE4A2740096B7C0 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		4F82B5901BE4A2740096B7C0 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -36,6 +58,8 @@
 		4F82B5AB1BE4AE680096B7C0 /* NewsListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NewsListViewController.m; sourceTree = "<group>"; };
 		4F82B5AD1BE4AF8A0096B7C0 /* NewsAPIManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NewsAPIManager.h; sourceTree = "<group>"; };
 		4F82B5AE1BE4AF8A0096B7C0 /* NewsAPIManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NewsAPIManager.m; sourceTree = "<group>"; };
+		4F82B5DE1BE4BE2D0096B7C0 /* StoreManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StoreManager.h; sourceTree = "<group>"; };
+		4F82B5DF1BE4BE2D0096B7C0 /* StoreManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StoreManager.m; sourceTree = "<group>"; };
 		B4CE4C4E4130FAA5AFD441ED /* Pods-MeduzaNewsiProg2SeptOtk2015.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MeduzaNewsiProg2SeptOtk2015.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MeduzaNewsiProg2SeptOtk2015/Pods-MeduzaNewsiProg2SeptOtk2015.debug.xcconfig"; sourceTree = "<group>"; };
 		D3AAAB9B6CBA2DFB0AEFAAAA /* libPods-MeduzaNewsiProg2SeptOtk2015.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-MeduzaNewsiProg2SeptOtk2015.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -73,8 +97,13 @@
 		4F82B58C1BE4A2740096B7C0 /* MeduzaNewsiProg2SeptOtk2015 */ = {
 			isa = PBXGroup;
 			children = (
+				4F188F291BE4CA290093DEB9 /* PSRCoreDataTableViewController.h */,
+				4F188F2A1BE4CA290093DEB9 /* PSRCoreDataTableViewController.m */,
+				4F82B5CB1BE4BCC60096B7C0 /* CoreData */,
 				4F82B5AA1BE4AE680096B7C0 /* NewsListViewController.h */,
 				4F82B5AB1BE4AE680096B7C0 /* NewsListViewController.m */,
+				4F82B5DE1BE4BE2D0096B7C0 /* StoreManager.h */,
+				4F82B5DF1BE4BE2D0096B7C0 /* StoreManager.m */,
 				4F82B5AD1BE4AF8A0096B7C0 /* NewsAPIManager.h */,
 				4F82B5AE1BE4AF8A0096B7C0 /* NewsAPIManager.m */,
 				4F82B5A41BE4A2BA0096B7C0 /* Model.xcdatamodeld */,
@@ -97,6 +126,25 @@
 				4F82B58E1BE4A2740096B7C0 /* main.m */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		4F82B5CB1BE4BCC60096B7C0 /* CoreData */ = {
+			isa = PBXGroup;
+			children = (
+				4F188F171BE4C4840093DEB9 /* NewsCategory+CoreDataProperties.h */,
+				4F188F181BE4C4840093DEB9 /* NewsCategory+CoreDataProperties.m */,
+				4F188F191BE4C4840093DEB9 /* NewsCategory.h */,
+				4F188F1A1BE4C4840093DEB9 /* NewsCategory.m */,
+				4F188F1B1BE4C4840093DEB9 /* NewsImage+CoreDataProperties.h */,
+				4F188F1C1BE4C4840093DEB9 /* NewsImage+CoreDataProperties.m */,
+				4F188F1D1BE4C4840093DEB9 /* NewsImage.h */,
+				4F188F1E1BE4C4840093DEB9 /* NewsImage.m */,
+				4F188F1F1BE4C4840093DEB9 /* NewsArticle+CoreDataProperties.h */,
+				4F188F201BE4C4840093DEB9 /* NewsArticle+CoreDataProperties.m */,
+				4F188F211BE4C4840093DEB9 /* NewsArticle.h */,
+				4F188F221BE4C4840093DEB9 /* NewsArticle.m */,
+			);
+			name = CoreData;
 			sourceTree = "<group>";
 		};
 		C318D338BAD1AEB78EA322CF /* Pods */ = {
@@ -237,11 +285,19 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4F188F2B1BE4CA290093DEB9 /* PSRCoreDataTableViewController.m in Sources */,
+				4F82B5E01BE4BE2D0096B7C0 /* StoreManager.m in Sources */,
 				4F82B5A91BE4A8860096B7C0 /* NewsTableViewCell.m in Sources */,
 				4F82B5921BE4A2740096B7C0 /* AppDelegate.m in Sources */,
 				4F82B58F1BE4A2740096B7C0 /* main.m in Sources */,
+				4F188F241BE4C4840093DEB9 /* NewsCategory.m in Sources */,
 				4F82B5AF1BE4AF8A0096B7C0 /* NewsAPIManager.m in Sources */,
+				4F188F271BE4C4840093DEB9 /* NewsArticle+CoreDataProperties.m in Sources */,
+				4F188F261BE4C4840093DEB9 /* NewsImage.m in Sources */,
+				4F188F281BE4C4840093DEB9 /* NewsArticle.m in Sources */,
+				4F188F251BE4C4840093DEB9 /* NewsImage+CoreDataProperties.m in Sources */,
 				4F82B5A61BE4A2BA0096B7C0 /* Model.xcdatamodeld in Sources */,
+				4F188F231BE4C4840093DEB9 /* NewsCategory+CoreDataProperties.m in Sources */,
 				4F82B5AC1BE4AE680096B7C0 /* NewsListViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

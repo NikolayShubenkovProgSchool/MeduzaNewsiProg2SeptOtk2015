@@ -8,6 +8,8 @@
 
 #import <UIKit/UIKit.h>
 
-@interface NewsListViewController : UIViewController
+#import "PSRCoreDataTableViewController.h"
+
+@interface NewsListViewController : PSRCoreDataTableViewController
 
 @end

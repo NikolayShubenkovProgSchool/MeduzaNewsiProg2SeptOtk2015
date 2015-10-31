@@ -21,7 +21,7 @@
     return manager;
 }
 
-- (void)getNewsOfType:(NSString *)type page:(NSInteger)page {
+- (void)getNewsOfType:(NSString *)type page:(NSInteger)page withSuccess:(void (^)(id responseObject))success  failure:(void (^)(NSError *error))failure{
     [self GET:@"search"
    parameters:@{
                 @"chrono" : type,
@@ -31,9 +31,11 @@
                 }
       success:^(AFHTTPRequestOperation * _Nonnull operation, id  _Nonnull responseObject) {
           NSLog(@"%@",responseObject);
+          success(responseObject);
       }
       failure:^(AFHTTPRequestOperation * _Nonnull operation, NSError * _Nonnull error) {
           NSLog(@"%@",error);
+          failure(error);
       }];
 }
 

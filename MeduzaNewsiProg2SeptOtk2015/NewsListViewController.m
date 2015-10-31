@@ -10,7 +10,12 @@
 
 #import <MagicalRecord/MagicalRecord.h>
 #import <AFNetworking/AFNetworking.h>
+
+#import "NewsTableViewCell.h"
+#import "NewsArticle+CoreDataProperties.h"
+
 #import "NewsAPIManager.h"
+#import "StoreManager.h"
 
 @interface NewsListViewController ()
 
@@ -18,14 +23,41 @@
 
 @implementation NewsListViewController
 
+- (NSFetchRequest *)dataRequest {
+    NSFetchRequest *request = [[NSFetchRequest alloc]initWithEntityName:@"NewsArticle"];
+
+    NSSortDescriptor *sortDesriptor = [NSSortDescriptor sortDescriptorWithKey:@"date" ascending:NO];
+    
+    request.sortDescriptors = @[sortDesriptor];
+    
+    return request;
+}
+
+- (void)configureCell:(UITableViewCell *)aCell withItem:(NSManagedObject *)item {
+    NewsTableViewCell *newsCell = aCell;
+    NewsArticle *article = item;
+    
+    newsCell.articleLabel.text = article.title;
+    newsCell.dateLabel.text    = article.date.description;
+}
+
 - (void)viewDidLoad {
+    
+    self.cellReuseIdentifier = @"NewsID";
+    
     [super viewDidLoad];
     [self updateDataForPage:0];
     // Do any additional setup after loading the view.
 }
 
 - (void)updateDataForPage:(NSInteger)page {
-    [[NewsAPIManager manager] getNewsOfType:@"shapito" page:0];
+    [[NewsAPIManager manager] getNewsOfType:@"shapito" page:0 withSuccess:^(id responseObject) {
+        StoreManager *manager = [StoreManager new];
+        [manager saveNewsArticlesFromJSON:responseObject];
+        
+    } failure:^(NSError *error) {
+        
+    }];
 }
 
 @end
